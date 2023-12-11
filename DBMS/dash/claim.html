@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Claim Item</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style type="text/css">
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .card {
+      width: 50%;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+
+    .card-header {
+      border-bottom: none;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .btn-primary {
+      width: 100%;
+    }
+
+    video {
+      object-fit: cover;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .response-message {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header bg-primary text-white">
+        <h3 class="mb-0">Claim Item</h3>
+      </div>
+      <div class="card-body">
+        <form id="claimForm" action="http://localhost/DBMS/dash/claim_process.php" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="Name">Name:</label>
+            <input type="text" class="form-control" id="Name" name="Name" required>
+          </div>
+          <div class="form-group">
+    <label for="claimedItemName">Claimed Item Name:</label>
+    <select class="form-control" id="claimedItemName" name="claimedItemName" required>
+        <option value="Clothes">Clothes</option>
+        <option value="Gadgets">Gadgets</option>
+        <option value="Wallets">Wallets</option>
+        <option value="Jewellery">Jewellery</option>
+        <option value="Cards">Cards</option>
+        <option value="Other">Other</option>
+    </select>
+</div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div id="responseMessage" class="response-message"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
