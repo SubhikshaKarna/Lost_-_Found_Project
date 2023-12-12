@@ -1,2 +1,2 @@
 Lost & Found Management System
-SQL,HTML,CSS,PHP,JavaScript
+SQL,HTML,CSS,PHP
